@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="zhCN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>重构ele</title>
+    <link rel="stylesheet" href="static/css/min.css">
+    <!--[if IE 8]>
+    <link rel="stylesheet" href="static/css/ie8.css">
+    <![endif]-->
+
+    <script>
+        var elements = ['article', 'nav', 'section', 'header', 'aside', 'footer'];
+        for (var i = elements.length - 1; i >= 0; i--) {
+            document.createElement(elements[i]);
+        }
+    </script>
+</head>
+
+<body>
+<div class="background">
+    <div class="sun"></div>
+</div>
+<div class="desk">
+    <header class="header">
+        <div class="content">
+            <a class="logo" href="javascript:void(0)" title="饿了么"></a>
+
+            <div class="mobile-content">
+                <a class="mobile" href="javascript:void(0)" title="手机客户端"></a>
+
+                <div class="show-mobile"></div>
+            </div>
+
+            <div class="search-content ml15">
+                <div class="search-text">
+                    <i class="search-icon"></i>
+                    <input type="text" placeholder="搜索餐厅,美食..."/>
+                    <i class="wait-icon n"></i>
+                </div>
+            </div>
+
+            <div class="navigate-content">
+                <nav class="nav-a navigate l">
+                    <a href="">我的饿单</a>
+                    <a href="">礼品中心</a>
+                    <a href="">附近团购</a>
+                    <a href="">联系客服</a>
+                </nav>
+                <span class="split l"></span>
+
+                <div class="cart l">
+                    <i></i>
+                </div>
+                <div class="nav-a user l ptr">
+                    <a href="">登录</a>
+                    <i class="ptr">|</i>
+                    <a href="">注册</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class="content">
+
+            <aside class="address">
+                上海中为智能机器人有限公司
+                <a href="javascript:void(0)">[切换地址]</a>
+            </aside>
+            <div class="carousel">
+                <img src="static/image/49c76d8868522e2793b74844b5914gif.gif">
+                <img src="static/image/795627d940d71323855b99bf36685gif.gif">
+                <img src="static/image/24afab59cadeac87ec23a51fe5e8dgif.gif">
+                <img src="static/image/10ea2f228dce4ef61c56c52ae5f9agif.gif">
+                <ul>
+                    <li class="hover">1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+            </div>
+            <div class="table collect">
+                <div class="table-top">
+                    <span class="l">我的收藏</span>
+                    <a class="r cab">设置</a>
+                </div>
+                <div class="table-cell">
+                    <ul class="collect-list">
+                        <li>
+                            <a></a>
+                        </li>
+                        <li>
+                            <a></a>
+                        </li>
+                        <li>
+                            <a></a>
+                        </li>
+                        <li>
+                            <a></a>
+                        </li>
+                        <li>
+                            <a></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="table elemgo">
+                <div class="table-top">
+                    <a class="elego">
+                        前往
+                        <em>55</em>
+                        家品牌餐厅
+                        <i></i>
+                    </a>
+                </div>
+                <div class="table-cell">
+                    <ul class="house house-list">
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/DFEE46E1_259453c30a5d2ca94ef3014bd6942jpeg.jpegw42h42.jpg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>原味之黄焖鸡</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>13份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/1b9ae69fabc77f3aadf3ad870896apng.png">
+                                <span cards-data="平均送餐时间：38分钟">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>必胜客太平洋</a>
+                                </div>
+                                <div class="house-type">西式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>4321份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/8e74a4734ed69772eafd1644e2380jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>耶里夏丽新疆餐厅</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>1323份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/11bf38537a9a00f97fd82f2e75af3jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>CoCo都可茶</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>1233份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/18e0b37256e29b054ccfe24ebaa9bjpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>食其家东安</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>13份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="help">
+                <span><img src="static/image/233D070F_4f1385094a51bc1816c65b3ea6da9gif.gif"></span>
+                <span><img src="static/image/857B3D49_ca212e55bbfb137346e429de97fb8gif.gif"></span>
+                <span><img src="static/image/fe03c44f1fab3448d2df24625da50gif.gif"></span>
+                <span><img src="static/image/0728055c786e1f250b783a0386a34gif.gif"></span>
+                <span><img src="static/image/4dfa08f216bf0bf39978f3d193855gif.gif"></span>
+                <span class="help-last"></span>
+            </div>
+            <div class="table group">
+                <div class="table-top">
+                    附近团购
+                </div>
+                <div class="table-cell">
+                    <ul class="house group-list">
+                        <li>
+                            <div class="house-logo group-logo l tc">
+                                <img src="static/image/thumb.jpg">
+                                <span>600人购买</span>
+                            </div>
+                            <div class="house-info group-info">
+                                <div class="house-title">
+                                    <a>外婆家</a>
+                                </div>
+                                <div class="group-pay">
+                                    <ins>¥19.9</ins>
+                                    <del>¥380</del>
+                                </div>
+                                <div class="group-buy">
+                                    立即抢购
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="house-logo group-logo l tc">
+                                <img src="static/image/shousi.jpg">
+                                <span>600人购买</span>
+                            </div>
+                            <div class="house-info group-info">
+                                <div class="house-title">
+                                    <a>伊秀寿司</a>
+                                </div>
+                                <div class="group-pay">
+                                    <ins>¥19.9</ins>
+                                    <del>¥380</del>
+                                </div>
+                                <div class="group-buy">
+                                    立即抢购
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="house-logo group-logo l tc">
+                                <img src="static/image/fanjian.jpg">
+                                <span>600人购买</span>
+                            </div>
+                            <div class="house-info group-info">
+                                <div class="house-title">
+                                    <a>很高心遇见你</a>
+                                </div>
+                                <div class="group-pay">
+                                    <ins>¥19.9</ins>
+                                    <del>¥380</del>
+                                </div>
+                                <div class="group-buy">
+                                    立即抢购
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="house-logo group-logo l tc">
+                                <img src="static/image/refen.jpg">
+                                <span>600人购买</span>
+                            </div>
+                            <div class="house-info group-info">
+                                <div class="house-title">
+                                    <a>hot热风</a>
+                                </div>
+                                <div class="group-pay">
+                                    <ins>¥19.9</ins>
+                                    <del>¥380</del>
+                                </div>
+                                <div class="group-buy">
+                                    立即抢购
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="house-logo group-logo l tc">
+                                <img src="static/image/dapaifan.jpg">
+                                <span>600人购买</span>
+                            </div>
+                            <div class="house-info group-info">
+                                <div class="house-title">
+                                    <a>duang大牌饭</a>
+                                </div>
+                                <div class="group-pay">
+                                    <ins>¥19.9</ins>
+                                    <del>¥380</del>
+                                </div>
+                                <div class="group-buy">
+                                    立即抢购
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="table housemore">
+                <div class="table-top">
+                    更多餐厅
+                </div>
+                <div class="table-cell">
+                    <ul class="house house-list">
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/2079f5edad59d10525dff4989decajpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>刘氏龙虾烧烤</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>2342份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/b571166f327e34ab2ba138e3cd709jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>哈哈镜上海总站</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>3424份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/7e74229496dd904a4e4e9f4e346d5jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>ceke花神蛋糕</a>
+                                </div>
+                                <div class="house-type">甜点</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>13份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/d9cc60fc447fa9e3466ab5cce8221jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>高句丽韩国料理</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>13份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/7c54173bbe4beb9baf4eb1f50284djpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>避风唐</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>13份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/3577a994e02eac1b21f06557851fcjpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>正宗天香麻辣</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>1333份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/6108e9a2e697b54f9a95ec16b4796jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>宅鲜联盟</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>13份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/4148c86a56170cd879c1febbe74b7jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>周黑鸭外卖</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>1354份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/628f4238d17a776ef007dc2895569jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>新特美食</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>3113份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/046b8138476afa59760bc14cb62d3jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>乐乐美食</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>5613份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li class="house-close">
+                            <div class="house-logo l tc">
+                                <img src="static/image/ccb24f688a37bd1278187e99f7c73jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>扇贝外卖</a>
+                                </div>
+                                <div class="house-close-body">
+                                    <span class="house-close-btn">休息中</span>
+                                </div>
+                                <div class="house-close-body">
+                                    <span>已打烊</span>
+                                </div>
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li class="house-close">
+                            <div class="house-logo l tc">
+                                <img src="static/image/b93c3a9a1452b59bc8bce9637386cjpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>长生元炖汤面</a>
+                                </div>
+                                <div class="house-close-body">
+                                    <span class="house-close-btn">休息中</span>
+                                </div>
+                                <div class="house-close-body">
+                                    <span>已打烊</span>
+                                </div>
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li class="house-close">
+                            <div class="house-logo l tc">
+                                <img src="static/image/11bf38537a9a00f97fd82f2e75af3jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>米宝宝便当</a>
+                                </div>
+                                <div class="house-close-body">
+                                    <span class="house-close-btn">休息中</span>
+                                </div>
+                                <div class="house-close-body">
+                                    <span>已打烊</span>
+                                </div>
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li class="house-close">
+                            <div class="house-logo l tc">
+                                <img src="static/image/ed7d6ff00eac203352b6ce644daaajpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>福荣祥烧腊</a>
+                                </div>
+                                <div class="house-close-body">
+                                    <span class="house-close-btn">休息中</span>
+                                </div>
+                                <div class="house-close-body">
+                                    <span>已打烊</span>
+                                </div>
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li class="house-close">
+                            <div class="house-logo l tc">
+                                <img src="static/image/422ec8356d5f58487bc7d61cebc5cjpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>路香芳</a>
+                                </div>
+                                <div class="house-close-body">
+                                    <span class="house-close-btn">休息中</span>
+                                </div>
+                                <div class="house-close-body">
+                                    <span>已打烊</span>
+                                </div>
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li class="house-close">
+                            <div class="house-logo l tc">
+                                <img src="static/image/b74d37d618ec7c722f9eba57666e6jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>永嘉小厨</a>
+                                </div>
+                                <div class="house-close-body">
+                                    <span class="house-close-btn">休息中</span>
+                                </div>
+                                <div class="house-close-body">
+                                    <span>已打烊</span>
+                                </div>
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li class="house-close">
+                            <div class="house-logo l tc">
+                                <img src="static/image/56a13d655f5a09b28e5bdfd2a5362jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>丽华快餐</a>
+                                </div>
+                                <div class="house-close-body">
+                                    <span class="house-close-btn">休息中</span>
+                                </div>
+                                <div class="house-close-body">
+                                    <span>已打烊</span>
+                                </div>
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li class="house-close">
+                            <div class="house-logo l tc">
+                                <img src="static/image/f9933e89e0de9d0088b7d1b7fce25jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>美味空间日式</a>
+                                </div>
+                                <div class="house-close-body">
+                                    <span class="house-close-btn">休息中</span>
+                                </div>
+                                <div class="house-close-body">
+                                    <span>已打烊</span>
+                                </div>
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/fd28fa5a1b4dad057f50cc2b4ebb4jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>磨轮披萨屋</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>4553份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="house-logo l tc">
+                                <img src="static/image/836f8157544f6c0881291c85563a7jpeg.jpeg">
+                                <span cards-data="预计28分钟送达预计达">38分钟</span>
+
+                                <div class="cards">
+                                    <p></p>
+                                    <i class="cards-icon"></i>
+                                </div>
+                            </div>
+                            <div class="house-info w105">
+                                <div class="house-title">
+                                    <a>旺仔餐厅</a>
+                                </div>
+                                <div class="house-type">中式</div>
+                                <div class="house-sales">
+                                    <span class="star star-5"></span>
+                                    <span>13份</span>
+                                </div>
+                                <div class="house-privilege">
+                                    <i class="privilege privilege-online" cards-data="该餐厅支持在线支付"></i>
+                                    <i class="privilege privilege-subtract" cards-data="在线支付满20减10"></i>
+                                    <i class="privilege privilege-new" cards-data="该餐厅支持发票,请在下单时填写好发票抬头"></i>
+                                    <i class="privilege privilege-1st" cards-data="新用户下单立减15元"></i>
+
+                                    <div class="cards">
+                                        <p></p>
+                                        <i class="cards-icon"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="house-collect">
+                                <div class="collect">
+                                    <a>收藏</a>
+                                </div>
+                            </div>
+                            <div class="house-infodetail">
+                                <div class="info-icon"></div>
+                                <h3>远征披萨</h3>
+
+                                <p><i class="privilege privilege-online"></i>该商家已通过个人身份认证</p>
+
+                                <p><i class="privilege privilege-subtract"></i>该餐厅支持在线支付</p>
+
+                                <p><i class="privilege privilege-new"></i>在线支付满20减8</p>
+
+                                <p><i class="privilege privilege-1st"></i>饿了么新用户在该餐厅下首单,可立减15元</p>
+
+                                <p class="cr"><b>公告:</b>饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单饿了么新用户在该餐厅下首单</p>
+
+                                <p><b>起送价：</b>到上海中卫智能机器人</p>
+
+                                <p><b>地址：</b>到上海中卫智能机器人</p>
+
+                                <p><b>营业时间：</b>11:00-18:00</p>
+
+                                <p><b>简介：</b>远征披萨</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content">
+            <nav class="nav-footer">
+                <a href="">我要开店</a>|
+                <a href="">联系我们</a>|
+                <a href="">服务条款和协议</a>|
+                <a href="">站点地图</a>|
+                <a href="">加入我们</a>
+            </nav>
+            <div class="licence-footer">
+                <span>增值电信业务许可证：</span>
+                <nav>
+                    <a href="">沪B2-20150033</a>|
+                    <a href="">沪ICP备 09007032</a>|
+                    <a href="">上海工商行政管理</a>
+                </nav>
+                <span>Copyright ©2008-2015 ele.me, All Rights Reserved.</span>
+            </div>
+        </div>
+    </footer>
+</div>
+<div class="tag">
+    <div class="tag-top">
+        <i></i>
+    </div>
+    <div class="tag-apply">
+        <i></i>
+        <a></a>
+    </div>
+    <div>我要开店</div>
+    <div>热门问题</div>
+    <div>在线客服</div>
+</div>
+<script src="static/js/elemin.js"></script>
+</body>
+</html>
