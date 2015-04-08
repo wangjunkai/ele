@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+html, head, body {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #333;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.none{
+    display: none;
+}
+
+.clear {
+    clear: both;
+}
+
+.container {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../image/background.jpg") repeat-x;
+    background-position: 1px -6796px;
+}
+
+.min_content {
+    position: relative;
+}
+
+.top_header {
+    width: 100%;
+    height: 40px;
+    background: #222;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: -moz-linear-gradient(270deg, rgba(55, 55, 55, 1), rgba(0, 0, 0, 1));;
+    background: -webkit-linear-gradient(270deg, rgba(55, 55, 55, 1), rgba(0, 0, 0, 1));;
+    background: -o-linear-gradient(270deg, rgba(55, 55, 55, 1), rgba(0, 0, 0, 1));;
+}
+
+.logo {
+    float: left;
+    display: inline-block;
+    width: 90px;
+    height: 40px;
+    background: url("../image/454F21FF_topbar.pngv2.png") no-repeat;
+}
+/*header手机*/
+.mobile_content, .search_content {
+    float: left;
+    display: inline-block;
+    position: relative;
+    height: 40px;
+}
+
+.mobile_content .mobile, .search_content .search_form {
+    display: inline-block;
+    height: 24px;
+    margin: 8px 15px 8px 8px;
+    border-radius: 3px;
+    line-height: 24px;
+    color: #ababab;
+}
+
+.mobile_content .mobile {
+    background: url("../image/454F21FF_topbar.pngv2.png") no-repeat transparent 5px -35px;
+    background-color: #2d2d2d;
+    width: 82px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.mobile_content .mobile:after {
+    content: "手机客户端";
+    margin-left: 13px;
+}
+
+/*header搜索*/
+.search_content .search_form {
+    width: 190px;
+    text-align: left;
+    border-radius: 3px;
+    background: #4e4e4e;
+    border: 1px solid #141414;
+    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,.3) inset;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.3) inset;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.3) inset;
+    -o-transition: all .2s linear 0s;
+    -webkit-transition: all .2s linear 0s;
+    -moz-transition: all .2s linear 0s;
+    transition: all .2s linear 0s;
+}
+.search_content .focus{
+    background: white;
+}
+.search_content .search_text {
+    border: 0;
+    width: 130px;
+}
+.search_content .search_text{
+    border: 0;
+    outline: none;
+    background-color: rgba(0,0,0,0);
+}
+.search_content .search_icon, .search_content .wait_icon {
+    background: url("../image/454F21FF_topbar.pngv2.png") no-repeat transparent ;
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+}
+.search_content .search_icon{
+    float: left;
+    background-position: 5px -56px;
+}
+.search_content .wait_icon {
+    float: right;
+    margin-left: 8px;
+    background-position: -36px -56px;
+}
