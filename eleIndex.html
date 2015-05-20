@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="zhCN">
 <head>
+    <title>重构ele</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>重构ele</title>
-    <link rel="stylesheet" href="static/css/min.css">
+    <meta name="description" content="饿了么是中国最专业的网上订餐平台,提供各类中式、日式、韩式、西式等优质美食。">
+    <link rel="stylesheet" href="static/stylesheets/min.css">
     <!--[if IE 8]>
-    <link rel="stylesheet" href="static/css/ie8.css">
+    <link rel="stylesheet" href="static/stylesheets/ie8.css">
     <![endif]-->
 
     <script>
@@ -29,7 +30,16 @@
             <div class="mobile-content">
                 <a class="mobile" href="javascript:void(0)" title="手机客户端"></a>
 
-                <div class="show-mobile"></div>
+                <div class="show-mobile">
+                    <div class="show-mobileicon"></div>
+                    <div class="show-triangle"></div>
+                    <div>
+                        <p class="info">扫一扫，手机订餐更方便</p>
+                        <a class="sao"></a>
+                        <a class="app"></a>
+                        <a class="android"></a>
+                    </div>
+                </div>
             </div>
 
             <div class="search-content ml15">
@@ -68,10 +78,12 @@
                 <a href="javascript:void(0)">[切换地址]</a>
             </aside>
             <div class="carousel">
-                <img src="static/image/49c76d8868522e2793b74844b5914gif.gif">
-                <img src="static/image/795627d940d71323855b99bf36685gif.gif">
-                <img src="static/image/24afab59cadeac87ec23a51fe5e8dgif.gif">
-                <img src="static/image/10ea2f228dce4ef61c56c52ae5f9agif.gif">
+                <div class="carousel-img">
+                    <img src="static/images/49c76d8868522e2793b74844b5914gif.gif" alt="疯狂返校季">
+                    <img src="static/images/795627d940d71323855b99bf36685gif.gif" alt="上海市餐厅服务食品安全">
+                    <img src="static/images/24afab59cadeac87ec23a51fe5e8dgif.gif" alt="红包来分享大家一起抢">
+                    <img src="static/images/10ea2f228dce4ef61c56c52ae5f9agif.gif" alt="举报刷单拿悬赏">
+                </div>
                 <ul>
                     <li class="hover">1</li>
                     <li>2</li>
@@ -117,7 +129,8 @@
                     <ul class="house house-list">
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/DFEE46E1_259453c30a5d2ca94ef3014bd6942jpeg.jpegw42h42.jpg">
+                                <img src="static/images/DFEE46E1_259453c30a5d2ca94ef3014bd6942jpeg.jpegw42h42.jpg"
+                                     alt="原味之黄焖鸡">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -178,7 +191,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/1b9ae69fabc77f3aadf3ad870896apng.png">
+                                <img src="static/images/1b9ae69fabc77f3aadf3ad870896apng.png" alt="必胜客太平洋">
                                 <span cards-data="平均送餐时间：38分钟">38分钟</span>
 
                                 <div class="cards">
@@ -239,7 +252,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/8e74a4734ed69772eafd1644e2380jpeg.jpeg">
+                                <img src="static/images/8e74a4734ed69772eafd1644e2380jpeg.jpeg" alt="耶里夏丽新疆餐厅">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -300,7 +313,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/11bf38537a9a00f97fd82f2e75af3jpeg.jpeg">
+                                <img src="static/images/11bf38537a9a00f97fd82f2e75af3jpeg.jpeg" alt="CoCo都可茶">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -361,7 +374,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/18e0b37256e29b054ccfe24ebaa9bjpeg.jpeg">
+                                <img src="static/images/18e0b37256e29b054ccfe24ebaa9bjpeg.jpeg" alt="食其家东安">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -425,11 +438,11 @@
 
             </div>
             <div class="help">
-                <span><img src="static/image/233D070F_4f1385094a51bc1816c65b3ea6da9gif.gif"></span>
-                <span><img src="static/image/857B3D49_ca212e55bbfb137346e429de97fb8gif.gif"></span>
-                <span><img src="static/image/fe03c44f1fab3448d2df24625da50gif.gif"></span>
-                <span><img src="static/image/0728055c786e1f250b783a0386a34gif.gif"></span>
-                <span><img src="static/image/4dfa08f216bf0bf39978f3d193855gif.gif"></span>
+                <span><img src="static/images/233D070F_4f1385094a51bc1816c65b3ea6da9gif.gif" alt="热卖美食"></span>
+                <span><img src="static/images/857B3D49_ca212e55bbfb137346e429de97fb8gif.gif" alt="订餐流程"></span>
+                <span><img src="static/images/fe03c44f1fab3448d2df24625da50gif.gif" alt="手机客户端"></span>
+                <span><img src="static/images/0728055c786e1f250b783a0386a34gif.gif" alt="谁拿外卖"></span>
+                <span><img src="static/images/4dfa08f216bf0bf39978f3d193855gif.gif" alt="常见问题"></span>
                 <span class="help-last"></span>
             </div>
             <div class="table group">
@@ -440,7 +453,7 @@
                     <ul class="house group-list">
                         <li>
                             <div class="house-logo group-logo l tc">
-                                <img src="static/image/thumb.jpg">
+                                <img src="static/images/thumb.jpg" alt="外婆家">
                                 <span>600人购买</span>
                             </div>
                             <div class="house-info group-info">
@@ -458,7 +471,7 @@
                         </li>
                         <li>
                             <div class="house-logo group-logo l tc">
-                                <img src="static/image/shousi.jpg">
+                                <img src="static/images/shousi.jpg" alt="伊秀寿司">
                                 <span>600人购买</span>
                             </div>
                             <div class="house-info group-info">
@@ -476,7 +489,7 @@
                         </li>
                         <li>
                             <div class="house-logo group-logo l tc">
-                                <img src="static/image/fanjian.jpg">
+                                <img src="static/images/fanjian.jpg" alt="很高心遇见你">
                                 <span>600人购买</span>
                             </div>
                             <div class="house-info group-info">
@@ -494,7 +507,7 @@
                         </li>
                         <li>
                             <div class="house-logo group-logo l tc">
-                                <img src="static/image/refen.jpg">
+                                <img src="static/images/refen.jpg" alt="hot热风">
                                 <span>600人购买</span>
                             </div>
                             <div class="house-info group-info">
@@ -512,7 +525,7 @@
                         </li>
                         <li>
                             <div class="house-logo group-logo l tc">
-                                <img src="static/image/dapaifan.jpg">
+                                <img src="static/images/dapaifan.jpg" alt="duang大牌饭">
                                 <span>600人购买</span>
                             </div>
                             <div class="house-info group-info">
@@ -539,7 +552,7 @@
                     <ul class="house house-list">
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/2079f5edad59d10525dff4989decajpeg.jpeg">
+                                <img src="static/images/2079f5edad59d10525dff4989decajpeg.jpeg" alt="刘氏龙虾烧烤">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -600,7 +613,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/b571166f327e34ab2ba138e3cd709jpeg.jpeg">
+                                <img src="static/images/b571166f327e34ab2ba138e3cd709jpeg.jpeg" alt="哈哈镜上海总站">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -661,7 +674,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/7e74229496dd904a4e4e9f4e346d5jpeg.jpeg">
+                                <img src="static/images/7e74229496dd904a4e4e9f4e346d5jpeg.jpeg" alt="ceke花神蛋糕">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -722,7 +735,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/d9cc60fc447fa9e3466ab5cce8221jpeg.jpeg">
+                                <img src="static/images/d9cc60fc447fa9e3466ab5cce8221jpeg.jpeg" alt="高句丽韩国料理">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -783,7 +796,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/7c54173bbe4beb9baf4eb1f50284djpeg.jpeg">
+                                <img src="static/images/7c54173bbe4beb9baf4eb1f50284djpeg.jpeg">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -844,7 +857,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/3577a994e02eac1b21f06557851fcjpeg.jpeg">
+                                <img src="static/images/3577a994e02eac1b21f06557851fcjpeg.jpeg" alt="正宗天香麻辣">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -905,7 +918,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/6108e9a2e697b54f9a95ec16b4796jpeg.jpeg">
+                                <img src="static/images/6108e9a2e697b54f9a95ec16b4796jpeg.jpeg" alt="宅鲜联盟">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -966,7 +979,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/4148c86a56170cd879c1febbe74b7jpeg.jpeg">
+                                <img src="static/images/4148c86a56170cd879c1febbe74b7jpeg.jpeg" alt="周黑鸭外卖">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1027,7 +1040,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/628f4238d17a776ef007dc2895569jpeg.jpeg">
+                                <img src="static/images/628f4238d17a776ef007dc2895569jpeg.jpeg" alt="新特美食">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1087,7 +1100,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/046b8138476afa59760bc14cb62d3jpeg.jpeg">
+                                <img src="static/images/046b8138476afa59760bc14cb62d3jpeg.jpeg" alt="乐乐美食">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1148,7 +1161,7 @@
                         </li>
                         <li class="house-close">
                             <div class="house-logo l tc">
-                                <img src="static/image/ccb24f688a37bd1278187e99f7c73jpeg.jpeg">
+                                <img src="static/images/ccb24f688a37bd1278187e99f7c73jpeg.jpeg" alt="扇贝外卖">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1198,7 +1211,7 @@
                         </li>
                         <li class="house-close">
                             <div class="house-logo l tc">
-                                <img src="static/image/b93c3a9a1452b59bc8bce9637386cjpeg.jpeg">
+                                <img src="static/images/b93c3a9a1452b59bc8bce9637386cjpeg.jpeg" alt="长生元炖汤面">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1248,7 +1261,7 @@
                         </li>
                         <li class="house-close">
                             <div class="house-logo l tc">
-                                <img src="static/image/11bf38537a9a00f97fd82f2e75af3jpeg.jpeg">
+                                <img src="static/images/11bf38537a9a00f97fd82f2e75af3jpeg.jpeg" alt="米宝宝便当">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1298,7 +1311,7 @@
                         </li>
                         <li class="house-close">
                             <div class="house-logo l tc">
-                                <img src="static/image/ed7d6ff00eac203352b6ce644daaajpeg.jpeg">
+                                <img src="static/images/ed7d6ff00eac203352b6ce644daaajpeg.jpeg" alt="福荣祥烧腊">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1348,7 +1361,7 @@
                         </li>
                         <li class="house-close">
                             <div class="house-logo l tc">
-                                <img src="static/image/422ec8356d5f58487bc7d61cebc5cjpeg.jpeg">
+                                <img src="static/images/422ec8356d5f58487bc7d61cebc5cjpeg.jpeg" alt="路香芳">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1398,7 +1411,7 @@
                         </li>
                         <li class="house-close">
                             <div class="house-logo l tc">
-                                <img src="static/image/b74d37d618ec7c722f9eba57666e6jpeg.jpeg">
+                                <img src="static/images/b74d37d618ec7c722f9eba57666e6jpeg.jpeg" alt="永嘉小厨">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1448,7 +1461,7 @@
                         </li>
                         <li class="house-close">
                             <div class="house-logo l tc">
-                                <img src="static/image/56a13d655f5a09b28e5bdfd2a5362jpeg.jpeg">
+                                <img src="static/images/56a13d655f5a09b28e5bdfd2a5362jpeg.jpeg" alt="丽华快餐">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1498,7 +1511,7 @@
                         </li>
                         <li class="house-close">
                             <div class="house-logo l tc">
-                                <img src="static/image/f9933e89e0de9d0088b7d1b7fce25jpeg.jpeg">
+                                <img src="static/images/f9933e89e0de9d0088b7d1b7fce25jpeg.jpeg" alt="美味空间日式">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1548,7 +1561,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/fd28fa5a1b4dad057f50cc2b4ebb4jpeg.jpeg">
+                                <img src="static/images/fd28fa5a1b4dad057f50cc2b4ebb4jpeg.jpeg" alt="磨轮披萨屋">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">
@@ -1609,7 +1622,7 @@
                         </li>
                         <li>
                             <div class="house-logo l tc">
-                                <img src="static/image/836f8157544f6c0881291c85563a7jpeg.jpeg">
+                                <img src="static/images/836f8157544f6c0881291c85563a7jpeg.jpeg" alt="旺仔餐厅">
                                 <span cards-data="预计28分钟送达预计达">38分钟</span>
 
                                 <div class="cards">

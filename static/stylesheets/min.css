@@ -1,0 +1,999 @@
+@charset "UTF-8";
+/* line 5, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 10, ../sass/min.scss */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
+
+/* line 15, ../sass/min.scss */
+div, span, ul, li, ol, a {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 19, ../sass/min.scss */
+a {
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+}
+
+/* line 25, ../sass/min.scss */
+.c {
+  clear: both;
+}
+
+/* line 29, ../sass/min.scss */
+.l {
+  float: left;
+}
+
+/* line 33, ../sass/min.scss */
+.r {
+  float: right;
+}
+
+/* line 37, ../sass/min.scss */
+.n {
+  display: none;
+}
+
+/* line 41, ../sass/min.scss */
+.ptr {
+  position: relative;
+}
+
+/* line 45, ../sass/min.scss */
+.tc {
+  text-align: center;
+}
+
+/* line 49, ../sass/min.scss */
+.ml15 {
+  margin-left: 15px;
+}
+
+/* line 53, ../sass/min.scss */
+.cr {
+  color: #FF7400;
+}
+
+/****************页面背景****************/
+/* line 58, ../sass/min.scss */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/background.jpg") repeat-x;
+  background-position: 1px -6796px;
+}
+
+/* line 69, ../sass/min.scss */
+.background > .sun {
+  display: inline-block;
+  width: 400px;
+  height: 300px;
+  background: transparent url("../images/clouds.png") no-repeat -660px -350px;
+}
+
+/* line 77, ../sass/min.scss */
+.desk {
+  position: relative;
+  width: 100%;
+}
+
+/****************页面头部****************/
+/*通用*/
+/* line 84, ../sass/min.scss */
+.h40 {
+  height: 40px;
+}
+
+/* line 88, ../sass/min.scss */
+.content {
+  width: 950px;
+  margin: 0 auto;
+}
+
+/* line 93, ../sass/min.scss */
+.header {
+  width: 100%;
+  height: 40px;
+  background: #222;
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background: -moz-linear-gradient(270deg, #373737, black);
+  background: -webkit-linear-gradient(270deg, #373737, black);
+  background: -o-linear-gradient(270deg, #373737, black);
+}
+
+/*logo*/
+/* line 104, ../sass/min.scss */
+.logo {
+  float: left;
+  display: inline-block;
+  width: 90px;
+  height: 40px;
+  background: url("../images/454F21FF_topbar.pngv2.png") no-repeat;
+}
+
+/*header手机*/
+/* line 113, ../sass/min.scss */
+.mobile-content,
+.search-content {
+  float: left;
+  display: inline-block;
+  position: relative;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* line 122, ../sass/min.scss */
+.mobile-content .mobile,
+.search-content .search-text {
+  display: inline-block;
+  height: 25px;
+  border-radius: 3px;
+  line-height: 25px;
+  color: #ababab;
+}
+
+/* line 131, ../sass/min.scss */
+.mobile-content .mobile {
+  width: 82px;
+  font-size: 12px;
+  text-align: center;
+  background: url("../images/454F21FF_topbar.pngv2.png") no-repeat transparent 5px -35px;
+  background-color: #2d2d2d;
+}
+/* line 137, ../sass/min.scss */
+.mobile-content .mobile:after {
+  content: "手机客户端";
+  margin-left: 13px;
+}
+
+/* line 144, ../sass/min.scss */
+.mobile-content > .show-mobile {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 37px;
+  width: 235px;
+  background-color: #fff;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  z-index: 5;
+  padding: 0 25px 20px 30px;
+}
+/* line 155, ../sass/min.scss */
+.mobile-content > .show-mobile .info {
+  font-size: 16px;
+  font-weight: bold;
+  height: 45px;
+  line-height: 45px;
+  color: #333;
+}
+/* line 162, ../sass/min.scss */
+.mobile-content > .show-mobile > .show-mobileicon {
+  position: absolute;
+  top: 25px;
+  left: 8px;
+  width: 15px;
+  height: 28px;
+  background: url("../images/dl-arrow.png") no-repeat 0 0;
+}
+/* line 170, ../sass/min.scss */
+.mobile-content > .show-mobile > .show-triangle {
+  position: absolute;
+  top: -5px;
+  left: 19px;
+  width: 25px;
+  height: 5px;
+  background: url("../images/84523D44_bg.gif") no-repeat -172px -389px;
+}
+
+/* line 181, ../sass/min.scss */
+.app,
+.android {
+  float: right;
+  display: block;
+  width: 95px;
+  height: 30px;
+  background: url("../images/btn-appdownload.png") no-repeat 0 0;
+}
+
+/* line 190, ../sass/min.scss */
+.sao {
+  float: left;
+  display: block;
+  width: 72px;
+  height: 72px;
+  background: url("../images/app-qrcode-72.png") no-repeat 0 0;
+}
+
+/* line 198, ../sass/min.scss */
+.android {
+  background-position: 0 -30px;
+  margin-top: 10px;
+}
+
+/*header搜索*/
+/* line 205, ../sass/min.scss */
+.search-content > .search-text {
+  width: 190px;
+  height: 26px;
+  text-align: left;
+  background: #4e4e4e;
+  border: 1px solid #141414;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3) inset;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3) inset;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3) inset;
+  -moz-transition: all 0.2s linear 0s;
+  -o-transition: all 0.2s linear 0s;
+  -webkit-transition: all 0.2s linear;
+  -webkit-transition-delay: 0s;
+  transition: all 0.2s linear 0s;
+}
+/* line 214, ../sass/min.scss */
+.search-content > .search-text > input[type='text'] {
+  width: 155px;
+  height: auto;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  outline: none;
+}
+
+/* line 225, ../sass/min.scss */
+.search-focus {
+  background: #fff;
+}
+
+/* line 229, ../sass/min.scss */
+.search-content .search-icon,
+.search-content .wait-icon {
+  background: url("../images/454F21FF_topbar.pngv2.png") no-repeat transparent;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+/* line 238, ../sass/min.scss */
+.search-content .search-icon {
+  float: left;
+  background-position: 5px -56px;
+}
+/* line 242, ../sass/min.scss */
+.search-content .wait-icon {
+  float: right;
+  margin-left: 8px;
+  background-position: -36px -56px;
+}
+
+/*header导航*/
+/* line 250, ../sass/min.scss */
+.navigate-content {
+  height: auto;
+  float: right;
+  margin-right: 3px;
+}
+
+/* line 261, ../sass/min.scss */
+.nav-a a {
+  height: 40px;
+  line-height: 40px;
+  font-size: 13px;
+  color: #c3c3c3;
+  display: inline-block;
+}
+
+/* line 268, ../sass/min.scss */
+.user i {
+  margin: 0 2px;
+  top: -1px;
+  color: #c3c3c3;
+  display: inline-block;
+}
+
+/* line 274, ../sass/min.scss */
+.navigate a {
+  padding: 0 8px;
+}
+
+/* line 279, ../sass/min.scss */
+.navigate-content > .split {
+  width: 1px;
+  height: 15px;
+  margin: 12px;
+  background-color: #4f4f4f;
+  display: inline-block;
+}
+/* line 286, ../sass/min.scss */
+.navigate-content > .cart {
+  font-size: 13px;
+  height: 40px;
+  width: auto;
+}
+/* line 290, ../sass/min.scss */
+.navigate-content > .cart > i {
+  display: block;
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  background: url("../images/454F21FF_topbar.pngv2.png") no-repeat transparent 0 -80px;
+}
+
+/*轮播图*/
+/* line 301, ../sass/min.scss */
+.carousel {
+  overflow: hidden;
+  height: 80px;
+  position: relative;
+}
+/* line 305, ../sass/min.scss */
+.carousel > .carousel-img {
+  position: relative;
+}
+/* line 307, ../sass/min.scss */
+.carousel > .carousel-img > img {
+  display: block;
+}
+/* line 311, ../sass/min.scss */
+.carousel > ul {
+  display: inline-block;
+  position: absolute;
+  right: 3px;
+  bottom: 6px;
+}
+/* line 316, ../sass/min.scss */
+.carousel > ul > li {
+  float: left;
+  cursor: pointer;
+  background: #fff;
+  color: #4e4e4e;
+  text-align: center;
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  opacity: 0.75;
+  filter: alpha(opacity=75);
+}
+/* line 329, ../sass/min.scss */
+.carousel > ul > li.hover {
+  background: #ff9213;
+  color: #fff;
+  font-weight: bold;
+}
+
+/****************页面内容****************/
+/*通用*/
+/* line 339, ../sass/min.scss */
+.w105 {
+  width: 105px;
+}
+
+/* line 343, ../sass/min.scss */
+.w70 {
+  width: 78px;
+}
+
+/* line 347, ../sass/min.scss */
+.cab {
+  color: #ababab;
+}
+
+/* line 352, ../sass/min.scss */
+.section a:hover {
+  text-decoration: underline;
+  color: #3686f0;
+}
+
+/* line 358, ../sass/min.scss */
+.table {
+  margin: 10px 0;
+  border: 1px solid #F4F4F4;
+  -moz-box-shadow: 0px 1px 2px 0px #b2b2b2;
+  -webkit-box-shadow: 0px 1px 2px 0px #b2b2b2;
+  box-shadow: 0px 1px 2px 0px #b2b2b2;
+}
+/* line 362, ../sass/min.scss */
+.table > .table-top {
+  font-size: 14px;
+  height: 35px;
+  line-height: 25px;
+  padding: 5px 8px;
+  border-bottom: 1px solid #C7C7C7;
+  background-color: #F4F4F4;
+  position: relative;
+  z-index: 1;
+  background: -webkit-linear-gradient(270deg, white, #f4f4f4);
+  background: -moz-linear-gradient(270deg, white, #f4f4f4);
+  background: -o-linear-gradient(270deg, white, #f4f4f4);
+  background: -ms-linear-gradient(270deg, white, #f4f4f4);
+}
+/* line 377, ../sass/min.scss */
+.table > .table-cell ul {
+  display: table;
+  width: 100%;
+  background: #fff;
+}
+/* line 381, ../sass/min.scss */
+.table > .table-cell ul > li {
+  float: left;
+  height: 92px;
+  width: 20.1%;
+  display: inline-block;
+  border-top: 1px solid #D8D8D8;
+  border-left: 1px solid #D8D8D8;
+  margin-top: -1px;
+  margin-left: -1px;
+}
+
+/* line 395, ../sass/min.scss */
+.cards {
+  position: absolute;
+  line-height: 2em;
+  padding: 0 7px;
+  margin-bottom: 2px;
+  background-color: #000;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 12px;
+  color: #fff;
+  text-align: center;
+  z-index: 6;
+  opacity: 0;
+  visibility: hidden;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 409, ../sass/min.scss */
+.cards > p {
+  max-width: 230px;
+}
+/* line 412, ../sass/min.scss */
+.cards > .cards-icon {
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: url("../images/84523D44_bg.gif") no-repeat -656px -42px;
+  content: '';
+  left: 50%;
+  bottom: 0;
+  margin-bottom: -5px;
+  margin-left: -5px;
+}
+
+/*星级图标*/
+/* line 426, ../sass/min.scss */
+.star {
+  display: inline-block;
+  width: 61px;
+  height: 16px;
+  vertical-align: middle;
+  background: url("../images/84523D44_bg.gif") no-repeat -1px -193px;
+}
+
+/* line 434, ../sass/min.scss */
+.star-5 {
+  background-position: -1px -179px;
+}
+
+/*优惠图标*/
+/* line 439, ../sass/min.scss */
+.privilege {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../images/8B53FBAD_service-icons.png8.pngv6.png") transparent 0 0 no-repeat;
+}
+
+/* line 446, ../sass/min.scss */
+.privilege-online {
+  background-position: 0 -160px;
+}
+
+/* line 450, ../sass/min.scss */
+.privilege-subtract {
+  background-position: 0 -40px;
+}
+
+/* line 454, ../sass/min.scss */
+.privilege-new {
+  background-position: 0 0;
+}
+
+/* line 458, ../sass/min.scss */
+.privilege-1st {
+  background-position: 0 -20px;
+}
+
+/*选择地址*/
+/* line 469, ../sass/min.scss */
+.address {
+  font-size: 13px;
+  color: #3686f0;
+  font-family: serif;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+/* line 473, ../sass/min.scss */
+.address > a {
+  font-size: 13px;
+  color: #3686f0;
+  font-family: serif;
+  margin-left: 3px;
+}
+
+/*我的收藏*/
+/* line 483, ../sass/min.scss */
+.collect-list li > a:hover {
+  background: url("../images/84523D44_bg.gif") no-repeat -303px -94px;
+}
+/* line 488, ../sass/min.scss */
+.collect-list > li {
+  float: left;
+  padding: 0;
+}
+/* line 491, ../sass/min.scss */
+.collect-list > li a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  background: url("../images/84523D44_bg.gif") no-repeat -112px -94px;
+}
+
+/*ele配送*/
+/* line 501, ../sass/min.scss */
+.elego {
+  line-height: 20px;
+}
+/* line 503, ../sass/min.scss */
+.elego em {
+  font-size: 20px;
+  color: #FF673A;
+}
+/* line 507, ../sass/min.scss */
+.elego i {
+  display: inline-block;
+  width: 98px;
+  height: 18px;
+  background: url("../images/deliver-icon.png");
+  vertical-align: middle;
+}
+
+/*餐厅列表*/
+/* line 518, ../sass/min.scss */
+.house li {
+  padding: 12px;
+}
+/* line 520, ../sass/min.scss */
+.house li:hover {
+  background: #F5F5F5;
+}
+
+/* line 527, ../sass/min.scss */
+.house-logo > span {
+  color: #8C8C8C;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  position: relative;
+}
+/* line 534, ../sass/min.scss */
+.house-logo > img {
+  height: 42px;
+  width: 42px;
+  border: 1px solid #ddd;
+  padding: 1px;
+}
+
+/* line 543, ../sass/min.scss */
+.house-info {
+  margin-left: 10px;
+  line-height: 17px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+/* line 550, ../sass/min.scss */
+.house-type {
+  color: #5a5a5a;
+}
+
+/* line 554, ../sass/min.scss */
+.house-title {
+  font-size: 14px;
+  height: 20px;
+  overflow: hidden;
+}
+/* line 558, ../sass/min.scss */
+.house-title > a {
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+}
+
+/* line 565, ../sass/min.scss */
+.house-sales {
+  color: #A3A3A3;
+}
+
+/* line 569, ../sass/min.scss */
+.house-privilege, .house-privilege i {
+  display: inline-block;
+}
+/* line 571, ../sass/min.scss */
+.house-privilege i {
+  float: left;
+  margin-right: 4px;
+}
+
+/* line 578, ../sass/min.scss */
+.house-collect {
+  position: relative;
+}
+/* line 580, ../sass/min.scss */
+.house-collect > .collect {
+  display: none;
+  width: 60px;
+  height: 17px;
+  position: absolute;
+  text-indent: 6px;
+  text-decoration: underline;
+  right: -7px;
+  top: -23px;
+  background: #F5F5F5;
+}
+/* line 590, ../sass/min.scss */
+.house-collect > .collect > a {
+  background: url("../images/84523D44_bg.gif") no-repeat -122px -778px;
+  display: inline-block;
+  width: 45px;
+  height: 17px;
+  line-height: 17px;
+  text-indent: 20px;
+  color: #3686f0;
+}
+
+/* line 602, ../sass/min.scss */
+.house-infodetail {
+  position: absolute;
+  width: 350px;
+  line-height: 23px;
+  font-size: 12px;
+  font-family: serif;
+  letter-spacing: 1px;
+  border: 1px solid #E5E5E5;
+  background: #FFF9D2;
+  z-index: 5;
+  padding: 10px 10px;
+  visibility: hidden;
+  -moz-box-shadow: 0 1px 2px 0 #b2b2b2;
+  -webkit-box-shadow: 0 1px 2px 0 #b2b2b2;
+  box-shadow: 0 1px 2px 0 #b2b2b2;
+}
+/* line 615, ../sass/min.scss */
+.house-infodetail > p {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+/* line 618, ../sass/min.scss */
+.house-infodetail > p > i {
+  margin-top: -2px;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+/* line 624, ../sass/min.scss */
+.house-infodetail > h3 {
+  font-weight: 100;
+}
+/* line 627, ../sass/min.scss */
+.house-infodetail > .info-icon {
+  background: url("../images/84523D44_bg.gif") no-repeat;
+  width: 11px;
+  height: 10px;
+  display: inline-block;
+  position: absolute;
+  z-index: 6;
+}
+/* line 635, ../sass/min.scss */
+.house-infodetail > .info-icon-left {
+  background-position: 0 -810px;
+  top: 25px;
+  left: -6px;
+}
+/* line 640, ../sass/min.scss */
+.house-infodetail > .info-icon-right {
+  background-position: 0 -820px;
+  bottom: 15px;
+  right: -11px;
+}
+
+/* line 647, ../sass/min.scss */
+.house-close {
+  background: #fff url("../images/C8D1E457_restaurant_closed_bg.png");
+}
+
+/* line 651, ../sass/min.scss */
+.house-close-btn {
+  border: 1px solid #c2c2c2;
+  padding: 2px 4px;
+  margin: 5px 0;
+}
+
+/* line 657, ../sass/min.scss */
+.house-close-body {
+  margin-top: 10px;
+  width: 60px;
+  display: inline-block;
+}
+
+/* line 669, ../sass/min.scss */
+.house-close .house-collect > .collect {
+  height: 20px;
+  margin-top: 2px;
+}
+/* line 674, ../sass/min.scss */
+.house-close img {
+  opacity: .5;
+  filter: Alpha(opacity=50);
+}
+/* line 677, ../sass/min.scss */
+.house-close span {
+  opacity: .5;
+  filter: Alpha(opacity=50);
+}
+/* line 680, ../sass/min.scss */
+.house-close i {
+  opacity: .5;
+  filter: Alpha(opacity=50);
+}
+
+/*帮助导航*/
+/* line 686, ../sass/min.scss */
+.help {
+  margin: 30px auto;
+  text-align: justify;
+  width: 950px;
+  height: 96px;
+}
+/* line 691, ../sass/min.scss */
+.help > span {
+  display: inline-block;
+  width: 150px;
+  vertical-align: top;
+}
+/* line 696, ../sass/min.scss */
+.help > .help-last {
+  width: 100%;
+  height: 0;
+}
+
+/*团购列表*/
+/* line 703, ../sass/min.scss */
+.group-title {
+  font-size: 15px;
+  margin-top: -3px;
+  letter-spacing: 1px;
+  height: 20px;
+  width: 78px;
+  overflow: hidden;
+}
+
+/* line 713, ../sass/min.scss */
+.group-logo img {
+  border: 1px solid #ddd;
+  padding: 2px;
+  width: 65px;
+  height: 40px;
+}
+/* line 719, ../sass/min.scss */
+.group-logo span {
+  margin-top: 3px;
+}
+
+/* line 726, ../sass/min.scss */
+.group-info ins {
+  text-decoration: none;
+  color: #414141;
+}
+/* line 730, ../sass/min.scss */
+.group-info del {
+  color: #808080;
+}
+
+/* line 735, ../sass/min.scss */
+.group-pay {
+  margin: 5px 0;
+}
+
+/* line 739, ../sass/min.scss */
+.group-buy {
+  width: 80px;
+  height: 25px;
+  display: inline-block;
+  border: 1px solid #C3C3C3;
+  text-align: center;
+  line-height: 25px;
+  color: #FF4D00;
+  cursor: pointer;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 749, ../sass/min.scss */
+.group-buy:hover {
+  color: #d83f00;
+}
+
+/****************页面底部****************/
+/* line 755, ../sass/min.scss */
+.footer {
+  margin: 50px 0 35px 0;
+  font-size: 13px;
+}
+/* line 758, ../sass/min.scss */
+.footer nav {
+  display: inline-block;
+  color: #3B5771;
+}
+/* line 762, ../sass/min.scss */
+.footer span {
+  color: #989898;
+}
+/* line 765, ../sass/min.scss */
+.footer a {
+  margin: 0 9px;
+}
+
+/* line 770, ../sass/min.scss */
+.footer
+.nav-footer,
+.licence-footer {
+  width: 100%;
+  text-align: center;
+}
+
+/* line 777, ../sass/min.scss */
+.licence-footer {
+  margin-top: 15px;
+}
+
+/*右下角标签*/
+/* line 782, ../sass/min.scss */
+.tag {
+  display: inline-block;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  width: 50px;
+  z-index: 4;
+}
+/* line 789, ../sass/min.scss */
+.tag > div {
+  float: left;
+  width: 47px;
+  height: 47px;
+  background: rgba(0, 0, 0, 0.5);
+  margin-top: 5px;
+  padding: 7px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 802, ../sass/min.scss */
+.tag > .tag-top {
+  display: none;
+}
+/* line 804, ../sass/min.scss */
+.tag > .tag-top > i {
+  display: inline-block;
+  background: url("../images/global-sprites.png") no-repeat -120px 0;
+  width: 26px;
+  height: 20px;
+  margin-top: 7px;
+}
+/* line 812, ../sass/min.scss */
+.tag > .tag-apply {
+  position: relative;
+}
+/* line 814, ../sass/min.scss */
+.tag > .tag-apply > i {
+  display: inline-block;
+  background: url("../images/global-sprites.png") no-repeat -150px 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 7px;
+}
+/* line 821, ../sass/min.scss */
+.tag > .tag-apply > a {
+  display: none;
+  width: 132px;
+  height: 132px;
+  position: absolute;
+  left: -135px;
+  top: -40px;
+  background: #fff url(../images/6CBCF444_app-qrcode.png) no-repeat;
+  border: 4px solid #fff;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
